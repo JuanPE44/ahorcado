@@ -43,14 +43,15 @@ class Juego {
     const divErrores = document.querySelector('.errores');
     divErrores.innerHTML += `<span>${letra} </span>`; 
     this.jugadorActual.errores++;
+    this.jugadorActual.puntaje++;
     console.log(this.jugadorActual.clase)
     this.pintarAhorcado();
   }
 
   pintarPuntaje() {
-    const j1 = document.querySelector('.jugador-J1 span').innerHTML = jugador1.errores;
-    const j2 = document.querySelector('.jugador-J2 span').innerHTML = jugador2.errores;
-    const jugador = document.querySelector('.jugadorActual').innerHTML = this.jugadorActual.elemento;
+    const j1 = document.querySelector('.jugador-J1 span').innerHTML = jugador1.puntaje;
+    const j2 = document.querySelector('.jugador-J2 span').innerHTML = jugador2.puntaje;
+    const jugador = document.querySelector('.jugadorActual').innerHTML = this.jugadorActual.txt;
     const divApp = document.querySelector('.app').style.borderBottom = `5px solid ${this.jugadorActual.color}`
   }
 
@@ -69,6 +70,15 @@ class Juego {
       case 6 : this.parteDelCuerpo('.pierna-d').style.visibility = 'visible';
       break;
     }
+  }
+
+  despintarAhorcado() {    
+    this.parteDelCuerpo('.cabeza').style.visibility = 'hidden';
+    this.parteDelCuerpo('.cuerpo').style.visibility = 'hidden';
+    this.parteDelCuerpo('.mano-i').style.visibility = 'hidden';
+    this.parteDelCuerpo('.mano-d').style.visibility = 'hidden';
+    this.parteDelCuerpo('.pierna-i').style.visibility = 'hidden';
+    this.parteDelCuerpo('.pierna-d').style.visibility = 'hidden';      
   }
 
   parteDelCuerpo(parteClase) {
@@ -94,7 +104,27 @@ class Juego {
       setTimeout(()=> {
         divPerdio.style.display = 'flex';
       },1000)
-    }
+    }    
+  }
+
+  continuar() {
+    const inputInicio = document.querySelector('.inicio-input');
+    const divPalabra = document.querySelector('.palabra');
+    this.despintarAhorcado();
+    this.palabraActual = '';
+    this.contadorLetras = 0;
+    this.jugadorActual.errores = 0;
+    document.querySelector('.contenedor-perdio').style.display ='none';
+    document.querySelector('.contenedor-gano').style.display ='none';
+    document.querySelector('.letras').innerHTML = '';
+    document.querySelectorAll('.errores span').forEach(span => {
+      span.innerHTML = '';
+    })
+    divInicio.style.display = 'flex';
+    divJuego.style.display = 'none';
+    inputInicio.value = '';
+    divPalabra.innerHTML= '';
+        
   }
 
 
