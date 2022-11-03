@@ -1,0 +1,242 @@
+
+
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
+
+
+$jugador1-color: #5ec96c;
+$jugador2-color: #5eb9c9;
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Dancing Script', cursive;
+}
+
+html {
+  font-size: 62.5%;
+
+  body {
+    min-height: 100vh;
+  }
+}
+
+.app {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  .errores {
+    position: absolute;
+    top: 8rem;
+    flex-grow: 0;
+    padding: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 250px;
+    margin-right: 1rem;
+    text-transform: uppercase;
+
+    span {
+      font-size: 1.5rem;
+      color: #eb4848;
+      margin: .4rem;
+    }
+  }
+
+  .app-puntaje {
+    position: relative;
+    width: 100%;
+    padding: 0 1rem;
+    flex-grow: 0;
+    display: flex;    
+    justify-content: space-between;
+    font-size: 3rem;
+    .jugador-J1 {
+      position: relative;
+      padding: 2rem;
+      color: $jugador1-color;
+      background: #222;
+      border-bottom: 3px solid $jugador1-color;      
+    }
+
+    .jugadorActual {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    .jugador-J2 {
+      position: relative;
+      padding: 2rem;
+      color: $jugador2-color;
+      background: #222;
+      border-bottom: 3px solid $jugador2-color;
+    }
+    
+  }
+
+  .app-inicio {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-grow: 10;
+
+    form {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+  
+      .inicio-input {
+        outline: none;
+        border: none;
+        font-size: 2.5rem;
+        padding: 1rem;
+        text-align: center;
+        margin-bottom: 2rem;
+        border-radius: 8px;
+        background: #222;
+        color: #fff;
+        text-transform: uppercase;
+        
+        &::placeholder {
+          text-transform: none;
+          color: #fff;
+          font-size: 2rem;
+        }
+      }
+  
+      .inicio-boton {
+        border: none;
+        background: transparent;
+        font-size: 2rem;
+        margin-top: 1rem;
+        padding: 1rem;
+        cursor: pointer;
+      }
+    }
+    }
+
+  .app-juego {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-grow: 1;
+
+    .contenedor-palabra {
+      width: 100%;
+      display: flex;
+
+      .palabra {        
+        display: flex;
+        justify-content: center;
+        padding: 1rem;
+        flex-grow: 1;
+        font-size: 4rem;
+        margin-bottom: 2rem;
+        text-transform: uppercase;
+        span {
+          margin: .2rem;
+        }
+      }
+
+      
+    }
+
+    .letras {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap; 
+      margin-top: 4rem;  
+      padding: 0 3rem;  
+      max-width: 650px;
+      .letra {
+        padding: 1rem;
+        font-size: 2rem;
+        margin: .5rem;
+        text-transform: uppercase;
+        cursor: pointer;
+      }
+
+      .letra-usada {
+        opacity: .1;
+        pointer-events: none;
+        cursor: none;
+      }
+    }
+  }
+
+  .contenedor-perdio {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #222;
+    color: #fff;
+
+    .span-palabra {
+      color: #eb4848;
+    }
+
+
+    h4 {
+      font-size: 4rem;
+      margin-bottom: 1rem;    
+    }
+
+    button {
+      border: none;
+      background: transparent;
+      font-size: 2rem;
+      margin-top: 3rem;
+      padding: 1rem 2rem;
+      cursor: pointer;
+      background: #eee;
+      border-radius: 8px;
+    }
+  }
+
+  .contenedor-gano {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #222;
+    color: #fff;
+
+    .span-palabra {
+      color: #5ec96c;
+    }
+
+    h4 {
+      font-size: 4rem;
+      margin-bottom: 1rem;    
+    }
+
+    button {
+      border: none;
+      background: transparent;
+      font-size: 2rem;
+      margin-top: 3rem;
+      padding: 1rem 2rem;
+      cursor: pointer;
+      background: #eee;
+      border-radius: 8px;
+    }
+  }
+}
+
+@import 'ahorcado';

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/app.css">
+  <title>Ahorcado</title>
+</head>
+<body>
+  
+  <div class="app">    
+    
+    <div class="app-puntaje">
+      <div class="jugador-J1">
+        <span></span>
+        <div class="ahorcado">
+          <div class="cuerda"></div>
+          <div class="cabeza">
+            <div class="ojos"></div>
+            <div class="ojos"></div>
+          </div>
+          <div class="cuerpo"></div>
+          <div class="mano-i"></div>
+          <div class="mano-d"></div>
+          <div class="pierna-i"></div>
+          <div class="pierna-d"></div>
+        </div>
+      </div>
+      <div class="jugadorActual"></div>
+      <div class="jugador-J2">
+        <span></span>
+        <div class="ahorcado">
+          <div class="cuerda"></div>
+          <div class="cabeza">
+            <div class="ojos"></div>
+            <div class="ojos"></div>
+          </div>
+          <div class="cuerpo"></div>
+          <div class="mano-i"></div>
+          <div class="mano-d"></div>
+          <div class="pierna-i"></div>
+          <div class="pierna-d"></div>
+        </div>
+      </div>      
+    </div>
+    <div class="errores"></div>
+    <div class="app-inicio">
+      <form>
+        <input class="inicio-input" type="password" placeholder="Ingrese palabra" required>
+        <button class="inicio-boton" type="submit">Empezar</button>
+      </form>
+    </div>
+    <div class="app-juego">
+      
+      <div class="contenedor-palabra">        
+        <div class="palabra"></div>
+      </div>
+      <div class="letras"></div>
+    </div>
+    <div class="contenedor-perdio">
+      <h4>Perdiste, la palabra era <span class="span-palabra"></span></h4>
+      <button>Continuar</button>
+    </div>
+    <div class="contenedor-gano">
+      <h4>Felicitaciones adivinaste!, la palabra era <span class="span-palabra"></span></h4>
+      <button>Continuar</button>
+    </div>
+  </div>
+  <script src="scripts/Jugador.js"></script>
+  <script src="scripts/Juego.js"></script>
+  <script src="scripts/Letra.js"></script>
+  <script src="scripts/Main.js"></script>
+</body>
+</html>
