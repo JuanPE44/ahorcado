@@ -23,7 +23,7 @@ html body {
 }
 .app .errores {
   position: absolute;
-  top: 8rem;
+  top: 10rem;
   flex-grow: 0;
   padding: 1rem;
   display: flex;
@@ -48,12 +48,14 @@ html body {
 }
 .app .app-puntaje .jugador-J1 {
   position: relative;
-  padding: 2rem;
-  color: #5ec96c;
+  padding: 3rem 4rem;
+  color: #fff;
   background: #222;
-  border-bottom: 3px solid #5ec96c;
+  border-bottom: 3px solid #905ec9;
+  border-radius: 0 0 8px 8px;
 }
 .app .app-puntaje .jugadorActual {
+  font-size: 4rem;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -61,10 +63,11 @@ html body {
 }
 .app .app-puntaje .jugador-J2 {
   position: relative;
-  padding: 2rem;
-  color: #5eb9c9;
+  padding: 3rem 4rem;
+  color: #fff;
   background: #222;
   border-bottom: 3px solid #5eb9c9;
+  border-radius: 0 0 8px 8px;
 }
 .app .app-inicio {
   display: flex;
@@ -81,13 +84,14 @@ html body {
 .app .app-inicio form .inicio-input {
   outline: none;
   border: none;
-  font-size: 2.5rem;
+  font-size: 3rem;
   letter-spacing: 1px;
-  padding: 1rem;
+  padding: 1.5rem 2rem;
   text-align: center;
-  margin-bottom: 2rem;
+  margin-bottom: 3rem;
   text-transform: uppercase;
-  border-bottom: 1px solid rgba(34, 34, 34, 0.7137254902);
+  border-bottom: 1px dashed rgba(34, 34, 34, 0.0941176471);
+  border-radius: 8px;
 }
 .app .app-inicio form .inicio-input::placeholder {
   text-transform: none;
@@ -98,9 +102,9 @@ html body {
   color: #fff;
   background: #222;
   border: none;
-  font-size: 2rem;
+  font-size: 2.5rem;
   margin-top: 1rem;
-  padding: 2rem 3rem;
+  padding: 1rem 3rem;
   cursor: pointer;
 }
 .app .app-juego {
@@ -119,7 +123,7 @@ html body {
   justify-content: center;
   padding: 1rem;
   flex-grow: 1;
-  font-size: 4rem;
+  font-size: 5rem;
   margin-bottom: 2rem;
   text-transform: uppercase;
 }
@@ -136,7 +140,7 @@ html body {
 }
 .app .app-juego .letras .letra {
   padding: 1rem;
-  font-size: 2rem;
+  font-size: 2.5rem;
   margin: 0.5rem;
   text-transform: uppercase;
   cursor: pointer;
@@ -156,6 +160,8 @@ html body {
   height: 100%;
   background: #222;
   color: #fff;
+  padding: 2rem;
+  text-align: center;
 }
 .app .contenedor-perdio .span-palabra {
   color: #eb4848;
@@ -184,6 +190,8 @@ html body {
   height: 100%;
   background: #222;
   color: #fff;
+  padding: 2rem;
+  text-align: center;
 }
 .app .contenedor-gano .span-palabra {
   color: #5ec96c;
@@ -210,13 +218,14 @@ html body {
   bottom: 0;
   display: flex;
   justify-content: center;
+  transform: scale(2);
 }
 .ahorcado .cuerda {
   position: absolute;
   width: 2px;
   height: 31px;
   border-radius: 0 0 10px 10px;
-  background: repeating-linear-gradient(45deg, #777 2px, #777 4px, #222 4px, #222 6px);
+  background: #333;
 }
 .ahorcado .cabeza {
   visibility: hidden;

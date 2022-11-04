@@ -5,7 +5,7 @@ const divInicio = document.querySelector('.app-inicio');
 const divJuego = document.querySelector('.app-juego');
 const botonEmpezar = document.querySelector('.inicio-boton');
 
-const jugador1Color = '#5ec96c';
+const jugador1Color = '#905ec9';
 const jugador2Color = '#5eb9c9';
 
 

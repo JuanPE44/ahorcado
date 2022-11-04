@@ -49,10 +49,12 @@ class Juego {
   }
 
   pintarPuntaje() {
-    const j1 = document.querySelector('.jugador-J1 span').innerHTML = jugador1.puntaje;
-    const j2 = document.querySelector('.jugador-J2 span').innerHTML = jugador2.puntaje;
-    const jugador = document.querySelector('.jugadorActual').innerHTML = this.jugadorActual.txt;
-    const divApp = document.querySelector('.app').style.borderBottom = `5px solid ${this.jugadorActual.color}`
+    document.querySelector('.jugador-J1 span').innerHTML = jugador1.puntaje;
+    document.querySelector('.jugador-J2 span').innerHTML = jugador2.puntaje;    
+    document.querySelector('.app').style.borderBottom = `5px solid ${this.jugadorActual.color}`;
+    const jugador = document.querySelector('.jugadorActual');
+    jugador.innerHTML = this.jugadorActual.txt;
+    jugador.style.color = `${this.jugadorActual.color}`;
   }
 
   pintarAhorcado() {
